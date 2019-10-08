@@ -1,0 +1,25 @@
+<table class="table">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Id</th>
+      <th scope="col">GirisTarihi</th>
+      <th scope="col">CikisTarihi</th>
+      <th scope="col">Fiyat</th>
+      <th scope="col">Rezervasyon Tarihi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rezervasyon of rezervasyonlar">
+      <th scope="row">1</th>
+      <td>{{rezervasyon.id}}</td>
+      <td>{{rezervasyon.girisTarihi}}</td>
+      <td>{{rezervasyon.cikisTarihi}}</td>
+      <td>{{rezervasyon.toplamFiyat}}</td>
+      <td>{{rezervasyon.rezervasyonTarihi}}</td>
+    </tr>
+   
+   
+  </tbody>
+</table>

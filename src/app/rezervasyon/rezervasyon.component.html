@@ -1,0 +1,65 @@
+<div class="container">
+<div class="row" style="text-align:center">
+
+
+<div id="booking" class="section">
+  <div class="section-center">
+    <div class="container">
+      <div class="row">
+        <div class="booking-form">
+          <div class="form-header">
+            <h1>Make your reservation</h1>
+
+
+            
+           
+            
+            
+          </div>
+          <form #odaRezerveForm="ngForm" (ngSubmit)="add(odaRezerveForm)" class="">
+           
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control" id="girisTarihi" name="girisTarihi" #girisTarihi="ngModel" [(ngModel)]="model.girisTarihi" type="date"  required>
+                  <span class="form-label">Giriş Tarihi</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control" id="cikisTarihi" name="cikisTarihi" #cikisTarihi="ngModel" [(ngModel)]="model.cikisTarihi"  type="date" required>
+                  <span class="form-label">Çıkış Tarihi</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+            
+              <div class="col-md-12">
+                <div class="form-group">
+                  <select class="form-control" required>
+                    <option value="" selected hidden>Kişi Seçilmedi</option>
+                    <option value="1">1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                  <span class="select-arrow"></span>
+                  <span class="form-label">Kişi Sayısı</span>
+                </div>
+              </div>
+          
+            </div>
+          
+            <div class="form-btn">
+              <button class="submit-btn" [disabled]="!registerForm.valid" type="submit">Book Now</button>
+
+             
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div></div>

@@ -1,0 +1,30 @@
+<div class="container">
+<table class="table">
+      
+    <caption>Odalar</caption>
+    <thead>
+      <tr>
+        <th scope="col">odaNo</th>
+        <th scope="col">Resim</th>
+        <th scope="col">Açıklama</th>
+        <th scope="col">Oda Durumu</th>
+        <th scope="col">Fiyat</th>
+        <th scope="col">Kişi Sayısı</th>
+        <th scope="col">#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let oda of odalar">
+        <th scope="row">{{oda.odaNo}}</th>
+        <td><img src="{{oda.resim}}" class="img-fluid" alt="Responsive image"></td>
+        <td>{{oda.aciklama}}</td>
+        <td>{{oda.odaDurumu}}</td>
+        <td>{{oda.ucret}}</td>
+        <td>{{oda.kisiSayisi}}</td>
+        <td><button (click)="odaSil(oda.id)" class="btn btn-sm btn-outline-danger">X</button></td>
+      </tr>
+     
+     
+    </tbody>
+  </table>
+</div>

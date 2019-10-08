@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    
+     <div class="col-md-12">
+		
+          <input type="text" class="form-control" id="odaAra" placeholder="Arama" [(ngModel)]="filterText">
+        <small *ngIf="filterText" class="form-text text-muted">Şu an <strong>{{filterText}}</strong> aradınız.</small>
+          <br>
+        </div>
+<div *ngFor="let oda of odalar | odaFilter:filterText" class="col-md-6">
+   
+  <div class="card mb-4 shadow-sm">
+    <img src="{{oda.resim}}" width="100%" height="225">
+   
+    <div class="card-body">
+      <p class="card-text">
+        OdaNo: {{oda.odaNo}}<br>
+       Açıklama: {{oda.aciklama}}<br> 
+      Fiyat:{{oda.ucret}}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" routerLink="/odaDetay/{{oda.id}}" class="btn btn-sm btn-outline-secondary">View</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        </div>
+        
+        <small  class="text-muted" *ngIf="odalar as value">Oda Durumu: {{oda.odaDurumu}}</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
